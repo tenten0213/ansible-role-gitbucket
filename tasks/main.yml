@@ -12,8 +12,7 @@
     - "{{ gitbucket_log_dir }}"
     
 - name: Download GitBucket war file
-  get_url: url=https://github.com/takezoe/gitbucket/releases/download/{{ gitbucket_version }}/gitbucket.war 
-          dest={{ gitbucket_war_file }}
+  shell: wget https://github.com/takezoe/gitbucket/releases/download/{{ gitbucket_version }}/gitbucket.war -P {{ gitbucket_war_dir }}
 
 - name: Copy GitBucket conf file
   template: src=gitbucket.conf.j2 dest={{ gitbucket_dir }}/gitbucket.conf

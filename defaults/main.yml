@@ -7,3 +7,4 @@ gitbucket_war_file: "{{ gitbucket_war_dir }}/gitbucket.war"
 gitbucket_log_dir: /var/log/gitbucket
 
 gitbucket_jvm_opts: -Dmail.smtp.starttls.enable=true
+gitbucket_validate_certs: no
